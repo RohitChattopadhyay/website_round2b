@@ -124,12 +124,7 @@ new(function(){});var d={l:function(a){return a},Be:function(a){return-a*(a-2)},
 <div class="container">
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -186,15 +181,27 @@ new(function(){});var d={l:function(a){return a},Be:function(a){return-a*(a-2)},
     </div>
   </div>
 
+
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
+  <a class="left carousel-control slide_fade" href="#myCarousel" data-slide="prev" onmouseover="slide_on_hover(0,1)" onmouseout="slide_on_hover(0,0)">
+    <span class="glyphicon glyphicon-chevron-left" id="slide_on_hover_0" style="display:none" ></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
+  <a class="right carousel-control slide_fade" href="#myCarousel" data-slide="next"  onmouseover="slide_on_hover(1,1)" onmouseout="slide_on_hover(1,0)">
+    <span class="glyphicon glyphicon-chevron-right"  id="slide_on_hover_1" style="display:none"></span>
     <span class="sr-only">Next</span>
   </a>
+  <script>
+	function slide_on_hover(dir,fState){
+		var target= "slide_on_hover_" + dir;
+		if(fState==1){
+			document.getElementById(target).style.display = "inline";
+		}
+		else if(fState==0){
+			document.getElementById(target).style["display"] = "none";
+		}		
+	}
+  </script>
 </div>
 </div>
 
@@ -467,7 +474,7 @@ life in our country. At E-Cell, we try to realise our vision by developing the e
 	<div class="row">
 		<div class="col-md-12" id="home-gallery" style="text-align:center">
 <div>
-  <h2 style="color: black ;font-family: 'Archivo Black', sans-serif; text-align:center"> Gallery </h2>
+  <h1 style="color: black ;font-family: 'Changa One', cursive; text-align:center"> Gallery </h1>
   <hr>
 </div>
 			<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:480px;overflow:hidden;visibility:hidden;">
@@ -615,7 +622,7 @@ life in our country. At E-Cell, we try to realise our vision by developing the e
 					<div class="item active">
 						<blockquote>
 							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
+								<div class="col-sm-10 col-sm-offset-2">
 									<p>
 									â€œTo any entrepreneu  There is no try.Itâ€™s not about ideas. Itâ€™s about making ideas happen.I congratulate to all those students who made rigorous efforts to make this idea of an Entrepreneurship Cell in Jadavpur University come to life.â€
 									</p>
@@ -628,7 +635,7 @@ life in our country. At E-Cell, we try to realise our vision by developing the e
 					<div class="item ">
 						<blockquote>
 							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
+								<div class="col-sm-10 col-sm-offset-2">
 									<p>â€œPlanning.Preparing.Building.
 Supporting.A Storm is in the air and the JU E-Cell is more than ready to fight to the topâ€.It is a place where we enjoy and work.We are not a group of people , we are a family.There are students from all departments here.
 									</p>
@@ -641,7 +648,7 @@ Supporting.A Storm is in the air and the JU E-Cell is more than ready to fight t
 					<div class="item ">
 						<blockquote>
 							<div class="row">
-								<div class="col-sm-8 col-sm-offset-2">
+								<div class="col-sm-10 col-sm-offset-2">
 									<p>
 									ontra from 45 BC, making it over . Richard McClintocge in Virginia looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
 									</p>
