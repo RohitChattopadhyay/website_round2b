@@ -29,7 +29,7 @@ if( isset($_POST['coordinator-form-submit'] )) {
 		$coordinator_department=addslashes($_POST['coordinator-form-department']);
 		$coordinator_team=addslashes($_POST['coordinator-form-team']);
 		$coordinator_phone=addslashes($_POST['coordinator-form-phone']);
-				$_SESSION['message']="Welcome to ECell Family, we will get back to you soon";
+		$_SESSION['message']="We're extremely happy to know that you want to join our team of talented coordinators! Our team will get back to you shortly!";
 		
 		$Csql = "INSERT INTO coordinators (name, email, phone, department, post) VALUES ('$coordinator_name','$coordinator_email','$coordinator_phone','$coordinator_department','$coordinator_team')";
 		if (mysqli_query($connection, $Csql)) {
@@ -46,7 +46,7 @@ if( isset($_POST['member-form-submit'] )) {
 		$member_institute=addslashes($_POST['member-form-college']);
 		$member_pass=addslashes($_POST['member-form-pass']);
 		$member_phone=addslashes($_POST['member-form-phone']);
-		$_SESSION['message']="Welcome to ECell Family, we will keep you informed";
+		$_SESSION['message']="You just signed up to be well-informed about the great things we do at the Jadavpur University E-Cell!<br>Ideate. Innovate. Build!";
 		
 		$Msql = "INSERT INTO subscribe (name, email, phone, college, department, passyear) VALUES ('$member_name','$member_email','$member_phone','$member_institute','$member_department','$member_pass')";
 		if (mysqli_query($connection, $Msql)) {
@@ -62,7 +62,7 @@ if( isset($_POST['contact-form-submit'] )) {
 //		$contact_institute=addslashes($_POST['contact-form-college']);
 		$contact_message=addslashes($_POST['contact-form-message']);
 		$contact_phone=addslashes($_POST['contact-form-phone']);
-			$_SESSION['message']="For contacting us, we will get back to you soon";
+		$_SESSION['message']="We're extremely happy to see your interest in the Jadavpur University E-Cell! Our team will get back to you shortly!";
 		
 		$Csql = "INSERT INTO contact (name, email, phone, message) VALUES ('$contact_name','$contact_email','$contact_phone','$contact_message')";
 		if (mysqli_query($connection, $Csql)) {
